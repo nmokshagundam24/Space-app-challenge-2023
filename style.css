@@ -1,0 +1,49 @@
+.homepage-ecoscope {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.homepage-ecoscope .overlap-group-wrapper {
+  background-color: #ffffff;
+  width: 1280px;
+  height: 780px;
+}
+
+.homepage-ecoscope .overlap-group {
+  position: relative;
+  height: 144px;
+  background-color: #080808;
+}
+
+.homepage-ecoscope .text-wrapper {
+  position: absolute;
+  width: 441px;
+  height: 90px;
+  top: 26px;
+  left: 419px;
+  font-family: "Inder-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 72px;
+  text-align: center;
+  letter-spacing: -1.22px;
+  line-height: normal;
+}
+
+.homepage-ecoscope .div {
+  position: absolute;
+  width: 138px;
+  height: 53px;
+  top: 45px;
+  left: 1106px;
+  font-family: "Jost-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: -0.68px;
+  line-height: normal;
+}
