@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up with Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            display: none;
+        }
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .option {
+            margin: 10px;
+            cursor: pointer;
+            color: #3498db;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-overlay">
+        <div class="popup-content">
+            <p>Select an option:</p>
+            <div class="option" onclick="navigateTo('mountain.html')">Mountain</div>
+            <div class="option" onclick="navigateTo('page2.html')">Platues</div>
+            <div class="option" onclick="navigateTo('page3.html')">Deserts</div>
+            <div class="option" onclick="navigateTo('page4.html')">Costal Regions</div>
+            <div class="option" onclick="navigateTo('page5.html')">Forests</div>
+        </div>
+    </div>
+    <script>
+        function openPopup() {
+            document.querySelector('.popup-overlay').style.display = 'flex';
+        }
+
+
+        function closePopup() {
+            document.querySelector('.popup-overlay').style.display = 'none';
+        }
+
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+function Mountain(){
+window.open("file:///C:/Users/sree9/OneDrive/Desktop/NASA/mountain.html")}
+    </script>
+    <button onclick="openPopup()">Open Pop-up</button>
+
+</body>
+</html>
