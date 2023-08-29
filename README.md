@@ -1,1 +1,2 @@
 # Space-app-challenge-2023
+Our project aims to create an engaging and educational interactive website that highlights the impact of climate change on diverse terrains. Through three distinct terrains — Mount Everest, Arctic Region, the Great Barrier Reef, and the Sahara Desert — we will showcase the effects of climate change on mountainss, glaciers, coral reefs, and arid regions.  By exploring these terrains, users will gain a deeper understanding of the complex relationship between climate change and our planet's ecosystems.
