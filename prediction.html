@@ -1,0 +1,55 @@
+<!-- Input Form -->
+<div>
+    <label for="temperature">Temperature (°F):</label>
+    <input type="number" id="temperature" step="0.1" required>
+</div>
+<div>
+    <label for="humidity">Humidity (%):</label>
+    <input type="number" id="humidity" step="0.1" required>
+</div>
+<div>
+    <label for="wind_speed">Wind Speed (mph):</label>
+    <input type="number" id="wind_speed" step="0.1" required>
+</div>
+<div>
+    <label for="vegetation_type">Vegetation Type:</label>
+    <select id="vegetation_type" required>
+        <option value="Grassland">Grassland</option>
+        <option value="Forest">Forest</option>
+        <option value="Desert">Desert</option>
+    </select>
+</div>
+<button onclick="predict()">Predict</button>
+<p id="prediction"></p>
+
+<script>
+    // JavaScript code for sending requests and updating predictions
+    function predict() {
+        // Gather input values
+        const temperature = parseFloat(document.getElementById('temperature').value);
+        const humidity = parseFloat(document.getElementById('humidity').value);
+        const wind_speed = parseFloat(document.getElementById('wind_speed').value);
+        const vegetation_type = document.getElementById('vegetation_type').value;
+        
+        // Construct input data object
+        const input = {
+            temperature: temperature,
+            humidity: humidity,
+            wind_speed: wind_speed,
+            vegetation_type: vegetation_type
+        };
+
+        // Send request to server
+        fetch('/predict', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(input),
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('prediction').innerText = 'Prediction: ' + data.prediction;
+        });
+    }
+</script>
